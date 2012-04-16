@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="cs" />
+    <meta name="author" lang="cs" content="hisasann; http://hisasann.com/housetect/" />
+    <meta name="copyright" lang="cs" content="hisasann; http://hisasann.com/housetect/" />
+    <meta name="description" content="Reflector.js - JavaScript Library" />
+    <meta name="keywords" content="javascript,javascripter,java,actionscript,flash,art" />
+    <meta name="robots" content="all,follow" />
+    <link href="css/screen.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<style type="text/css" media="screen">
+		.jMerrygoround {
+			margin-bottom: 20px;
+		}
+		
+		#imageWraper1 {
+			position: relative;
+			margin: 0px auto;
+			width: 700px;
+			height: 280px;
+			border: 1px dashed;
+		}
+
+		#imageWraper1 div.refImage {
+			float: left;
+			padding-left: 12px;
+			margin-top: 10px;
+		}
+
+		#imageWraper1 img {
+		}
+	</style>
+
+    <title>Reflector.js - JavaScript Library</title>
+  </head>
+  <body>
+    <div id="layout">
+      
+      <div id="header">
+        
+        <h1 id="logo"><a href="index.html">Reflector<span>.js</span></a></h1>
+        <hr class="noscreen" />   
+          
+        <div id="navigation">
+	        <ul>
+	          <li><a href="http://hisasann.com/" title="HOME">HOME</a></li>
+	          <li><a href="#changelog" title="CHANGELOG">CHANGELOG</a></li>
+	          <li><a href="#documentation" title="DOCUMENTATION">DOCUMENTATION</a></li>
+	          <li><a href="#download" title="DOWNLOAD">DOWNLOAD</a></li>
+	        </ul>
+        </div>
+        <hr class="noscreen" />  
+      </div>
+      
+        <div id="main">
+        
+        <h2 id="products">Example</h2>
+		<div class="jMerrygoround">
+			<div id="imageWraper1">
+				<div class="refImage"><a href="#"><img src="img/1.jpg" reflection="true" width="110"></a></div>
+				<div class="refImage"><span><img src="img/2.jpg" reflection="true" width="210"></span></div>
+				<div class="refImage"><img src="img/3.jpg" reflection="true" width="210"></div>
+				<div class="refImage"><img src="img/4.jpg" reflection="true" width="110"></div>
+			</div>
+		</div>
+
+        <h2 id="changelog">Changelog</h2>
+		<h4>Wed Mar 25 17:12:23 JST 2009</h4>
+		IEの場合にimgタグとcanvasタグ（実際にはimgタグ）をdivタグで囲わないように変更。<br>
+		imgタグの親要素にaタグがいた場合にdivタグにwidth、heightを指定するとリンク機能が正常に機能しないため。
+
+        <h2 id="documentation">Documentation</h2>
+		Reflector.jsは画像に水面のような反射効果を付けるJavaScript Libraryです。<br>
+
+		<h3>サンプルコード</h3>
+		<h4>JavaScript</h4>
+		reflection="true"が指定されたエレメントを一括でリフレクションさせる場合は以下のように記述してください。<br>
+		<textarea class="js" name="code">
+			Reflector.reflect();
+		</textarea><br>
+		エレメントを引数に渡してひとつの画像をリフレクションさせたい場合は以下のように記述してください。<br>
+		<textarea class="js" name="code">
+			Reflector.simpleReflect(elem);
+		</textarea>
+		
+		<h4>HTML</h4>
+		reflectメソッドを使う場合は、imgタグに<strong>reflection="true"</strong>を指定してください。<br>
+		<textarea name="code" class="html">
+			&lt;div id="imageWraper1"&gt;
+				&lt;-- imgタグだけの場合 --&gt;
+				&lt;div class="refImage"&gt;&lt;img src="img/1.jpg" reflection="true" width="210"&gt;&lt;/div&gt;
+				&lt;div class="refImage"&gt;&lt;img src="img/2.jpg" reflection="true" width="110"&gt;&lt;/div&gt;
+
+				&lt;-- aタグ使用の場合 --&gt;
+				&lt;div class="refImage"&gt;
+					&lt;a href="#"&gt;&lt;img src="img/3.jpg" reflection="true" width="110"&gt;&lt;/a&gt;
+				&lt;/div&gt;
+
+				&lt;-- spanタグ使用の場合 --&gt;
+				&lt;div class="refImage"&gt;
+					&lt;span&gt;&lt;img src="img/4.jpg" reflection="true" width="210"&gt;&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		</textarea>
+		
+		<h4>CSS</h4>
+		<textarea name="code" class="css">
+			#imageWraper1 div.refImage {
+				float: left;
+				padding-left: 12px;
+				margin-top: 10px;
+			}
+		</textarea>
+		
+        <h2 id="download">Download</h2>
+		<ul>
+			<li>
+				<a href="http://gist.github.com/85316" target="_blank">gist: 85316 - GitHub</a>
+			</li>
+		</ul>
+
+        <!-- <table>
+          <tr class="table-top">
+            <td>Sample table</td>
+            <td>Sample table</td>
+            <td>Sample table</td>
+            <td>Sample table</td>
+          </tr>
+          <tr>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+          </tr>
+          </table> -->
+          
+        </div>
+        </div>
+        <div id="footer">
+        <div id="footer-inside">
+        <p id="copyright">&copy; 2008 - <a href="http://hisasann.com/">hisasann</a></p>
+        
+        <!-- Please don't delete this. You can use this template for free and this is the only way that you can say thanks to me -->
+          <p id="dont-delete-this">Design by <a href="http://www.davidkohout.cz">David Kohout</a> | Our tip: <a href="http://www.goodmood.cz" title="Absinthe, Becherovka, Slivovitz store">Absinthe Store</a></p>
+        <!-- Thank you :) -->
+        
+        </div><div style="clear: both;"></div></div>
+		<script src="js/jquery-1.3.2.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/reflector.js"></script>
+		<!-- syntax -->
+		<link rel="stylesheet" href="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css" type="text/css" />  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shCore.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushPhp.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushJScript.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushJava.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushRuby.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/webscript.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(function() {
+				dp.SyntaxHighlighter.ClipboardSwf = 'http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/clipboard.swf';
+				dp.SyntaxHighlighter.HighlightAll('code');
+
+				// fadeInOut
+				$("#logo").fadeOut().fadeIn();
+
+				// smooth scroller
+				$("a[href^=#]").click(function() {
+					var hash = this.hash;
+					$($.browser.safari ? 'body' : 'html')
+						.animate({scrollTop: $(hash).offset().top}, 1500, "easeInOutBounce");
+					return false;
+				});
+
+				Reflector.reflect();
+			});
+		</script>
+  </body>
+</html>
